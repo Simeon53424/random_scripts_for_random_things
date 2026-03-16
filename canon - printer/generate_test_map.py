@@ -20,6 +20,6 @@ if margin_pt * 2 >= width or margin_pt * 2 >= height:
 
 c = canvas.Canvas("map.pdf", pagesize=A4)
 c.setFillColorRGB(0.0, 0.0, 0.0)
-c.setLineWidth(0.25)
+c.setLineWidth(1)
 c.rect(margin_pt, margin_pt, width - 2 * margin_pt, height - 2 * margin_pt, stroke=1, fill=0)
 c.save()
