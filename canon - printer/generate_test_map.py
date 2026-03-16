@@ -9,4 +9,8 @@ def cm_to_pt(cm):
     return Decimal(cm) * (Decimal(72) / Decimal('2.54'))
 
 
-c = canvas.Canvas("map.pdf")
+c = canvas.Canvas("map.pdf", pagesize=A4)
+c.setFillColorRGB(0.0, 0.0, 0.0)
+c.setLineWidth(0.1)
+c.rect(0, 0, width, height, stroke=1, fill=0)
+c.save()
