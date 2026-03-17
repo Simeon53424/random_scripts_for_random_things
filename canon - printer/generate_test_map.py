@@ -6,7 +6,7 @@ getcontext().prec = 30
 width, height = A4
 
 # Distance from each paper edge to the box, in millimeters.
-BOX_EDGE_DISTANCE_MM = Decimal("10")
+BOX_EDGE_DISTANCE_MM = Decimal("5")
 
 
 def mm_to_pt(mm):
