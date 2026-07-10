@@ -77,8 +77,10 @@ while True:
             subprocess.run(f"ip link set dev {nic_name} up".split(" "), check=True)
           except subprocess.CalledProcessError as e:
             print(f"nic restart failed:\n{e}")
+        fail_count = 0
     last_rx, last_rx_drops = total_rx, rx_drops
     last_tx, last_tx_drops = total_tx, tx_drops
     tqdm_sleep(sample_duration, desc="waiting...", colour="green")
   else:
     tqdm_sleep(10, desc="nic not found!", colour="red")
+    
